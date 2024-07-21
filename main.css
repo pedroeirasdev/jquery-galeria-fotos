@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header { /*cabeçalho*/
+    background-color: #5f27cd; /*cor de fundo*/
+    padding: 16px 0; /*espaçamento (cima/baixo, laterais)*/
+    color: #fff; /*cor da fonte*/
+    display: flex; /*display flexível*/
+    border-bottom: 16px solid #341f97; /*borda de baixo*/
+    justify-content: center; /*centraliza conteúdo*/
+    text-transform: uppercase; /*modifica texto: maiúsculo*/
+    font-style: italic; /*altera estilo de texto*/
+}
+
+header button { /*botão do cabeçalho*/
+    margin-left: 16px; /*margem da esquerda*/
+}
+
+form { /*formulário*/
+    background-color: #c8d6e5; /*cor de fundo*/
+    padding: 24px 0; /*espaçamento (cima/baixo, laterais)*/
+    text-align: center; /*alinhamento de texto centralizado*/
+    display: none; /*display: nenhum*/
+}
+
+form h2 { /*título 2 do formulário*/
+    margin-bottom: 16px; /*margem de baixo*/
+}
+
+input, button { /*entrada, botão*/
+    padding: 8px; /*espaçamento*/
+}
+
+button {
+    background-color: #009432; /*cor de fundo*/
+    border: none; /*borda: nenhuma*/
+    font-weight: bold; /*peso da fonte: negrito*/
+    text-transform: uppercase; /*modifica texto: maiúsculo*/
+    color: #fff; /*cor da fonte*/
+    cursor: pointer; /*cursor do mouse*/
+}
+
+#botao-cancelar { /*id="botao-cancelar"*/
+    background-color: red; /*cor de fundo*/
+}
+
+ul { /*lista desordenada*/
+    display: flex; /*para alinhar os elementos na horizontal*/
+    flex-wrap: wrap; /*para adicionar outra linha quando a anterior chegar ao limite*/
+}
+
+ul li { /*item dentro da lista*/
+    max-width: 25%; /*largura máxima dos itens*/
+    list-style: none; /*estilo de listagem*/
+    position: relative; /*posição relativa à outros comandos*/
+    max-height: 200px; /*altura máxima*/
+    overflow-y: hidden;/*oculta conteúdo que ultrapasse o limite*/
+}
+
+ul li img { /*imagem dentro da lista*/
+    width: 100%; /*largura*/
+}
+
+.overlay-imagem-link { /*id da lista de imagens*/
+    padding: 16px; /*espaçamento*/
+    background-color: rgba(0, 0, 0, 0.7); /*cor de fundo*/
+    position: absolute; /*para posicionar no canto inferior do li*/
+    bottom: 0; /*posicionar na extremidade inferior*/
+    left: 0; /*posicionar na extremidade esquerda*/
+    width: 100%; /*largura*/
+    opacity: 0; /*opacidade*/
+    transition: all ease .5s; /*transição*/
+}
+
+.overlay-imagem-link a { /*propriedade a dentro da id*/
+    color: #fff; /*cor da fonte*/
+    text-decoration: none; /*decoração da fonte*/
+}
+
+ul li:hover .overlay-imagem-link { /*utilizado quando é passado o mouse sobre a imagem*/
+    opacity: 1;
+}
